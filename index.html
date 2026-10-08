@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>DOMの操作でWebページに動きをつけよう</title>
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>博多弁クイズ</h1>
+  
+  <div id="yomifuda-area">
+    <!-- 「これってどういう意味？」の部分を表示する場所 -->
+    <p id="game-status">これってどういう意味？： <span id="current-yomifuda"></span></p>
+    
+    <!-- 【新設】正解・不正解をテンポよく伝えるメッセージ欄 -->
+    <div id="message-bar">正解のカードを選んでね！</div>
+    
+    <!-- 【新設】クリア時だけ表示されるもう一度遊ぶボタン -->
+    <button id="retry-btn" class="hidden">もう一度あそぶ！</button>
+  </div>
+
+  <div id="karuta-board">
+    <div class="fuda">なにしてるの？</div>
+    <div class="fuda">とても・すごく</div>
+    <div class="fuda">取っているの？</div>
+    <div class="fuda">いいよ</div>
+    <div class="fuda">片付ける</div>
+    <div class="fuda">背負う</div>
+    <div class="fuda">うるさい</div>
+    <div class="fuda">全然、まったく</div>
+    <div class="fuda">なるほどね、だよね</div>
+    <div class="fuda">腹が立つ、怒る</div>
+    <div class="fuda">壊れる</div>
+    <div class="fuda">なぐる</div>
+  </div>   <script src="js/js_kadai.js"></script>
+</body>  
+
+</html>

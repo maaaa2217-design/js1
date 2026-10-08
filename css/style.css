@@ -1,0 +1,104 @@
+body {
+ text-align: center;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 10px; /* 全体の余白を少し詰める */
+
+background-image: url("博多弁カルタ.png"); /* あなたの画像ファイル名に変えてね */
+  background-size: cover;          /* 画面全体に画像をぴったり合わせる設定 */
+  background-position: center;     /* 画像の中心を画面の真ん中に合わせる設定 */
+  background-attachment: fixed;    /* 画面をスクロールしても背景が動かないように固定する設定 */
+  background-repeat: no-repeat;    /* 画像が格子状にリピートされるのを防ぐ設定 */
+
+  /* タイトルも少しだけ小さくして高さを節約 */
+h1 {
+  font-size: 24px;
+  margin: 5px 0 10px 0;
+}
+
+/* 読札エリア（内側の余白を少なめに！） */
+#yomifuda-area {
+  font-size: 20px; /* 文字を少しだけコンパクトに */
+  font-weight: bold;
+  margin: 0 0 10px 0; /* 下の隙間を狭く */
+  padding: 8px 20px;  /* ★四角の内側の上下の余白を「15px」から「8px」に半減！ */
+  background-color: rgba(255, 255, 255, 0.9); /* 少し透けさせておしゃれに */
+  border: 2px solid #cd5c5c;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* メッセージ用の文字デザイン（高さを低く） */
+#message-bar {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;   /* 上の隙間を狭く */
+  height: 20px; 
+}
+
+/* リトライボタン（余白を小さくスマートに） */
+#retry-btn {
+  margin-top: 8px;
+  font-size: 16px;
+  padding: 6px 15px; /* ボタン内の余白を小さく */
+  background-color: #cd5c5c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#retry-btn:hover {
+  background-color: #b22222;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* 絵札を並べるボード（カード同士の隙間を狭く！） */
+#karuta-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;        /* ★カード同士の隙間を「15px」から「10px」に縮小 */
+  max-width: 580px; /* 横幅も少しコンパクトに */
+  margin: 0 auto;   /* 上下の余白をゼロに */
+}
+
+/* 絵札のカード（内側の余白を少なめに！） */
+.fuda {
+  width: 130px;
+  height: 100px;    /* ★カードの縦幅を「140px」から「100px」にして縦にスリム化 */
+  background-color: #fff;
+  border: 3px solid #228b22;
+  border-radius: 8px;
+  font-size: 16px;  /* 文字サイズを少し調整 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;     /* ★カードの内側の余白を「5px」から「2px」へ最小限に */
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.1s;
+}
+
+.fuda:hover {
+  transform: translateY(-3px); /* 浮き上がるアニメーションも控えめに */
+}
+
+.fuda.correct {
+  background-color: #cd5c5c;
+  border-color: #b22222;
+  color: #fff;
+  font-weight: bold;
+  pointer-events: none;
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(205, 92, 92, 0.5);
+}
+
+.fuda.wrong {
+  background-color: #ffcccc;
+  border-color: #ff0000;
+}
